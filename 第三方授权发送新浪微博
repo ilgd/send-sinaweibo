@@ -19,7 +19,7 @@ def run():
 		print "Ready! Do you want to send a new weibo?(y/n)"#判断是否要继续执行下去
 		choice = raw_input()
 		if choice == 'y' or choice == 'Y':
-			content = raw_input('input the your new weibo content : ')
+			content = raw_input('input the your new weibo content : ')#仅能发送英文，中文会出乱码
 			if content:
 				client.statuses.update.post(status=content)
 				print "Send succesfully!"
